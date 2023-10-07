@@ -26,7 +26,7 @@ const allComplaints = require("./Router/allComplaints.route");
 const contactUs = require("./Router/contactUs.router");
 const profileRouter = require("./Router/profile.route");
 const { postphonebook, getphonebook, deletephonebook } = require('./Router/phonebooks.route');
-const { emergancyRoute, getnotificationRoute, deletenotificationRoute, getAllnotificationRoute } = require('./Router/emergancyCall.route');
+const { emergancyRoute, getnotificationRoute, deletenotificationRoute, getAllnotificationRoute, acceptCallRequestRoute } = require('./Router/emergancyCall.route');
 const { sendNotification } = require('./sendnotification/sendNotifications');
 const app = express();
 const port = process.env.PORT || 8080;
@@ -70,7 +70,7 @@ app.use('/user', sendNotification);
 app.use('/police', getnotificationRoute);
 app.use('/police', deletenotificationRoute);
 app.use('/police', getAllnotificationRoute);
-
+app.use('/police', acceptCallRequestRoute);
 
 // user profile related routes
 app.use('/user', postphonebook);
