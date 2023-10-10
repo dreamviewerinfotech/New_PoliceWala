@@ -8,7 +8,7 @@ const missingMobile_Schema = new mongoose.Schema(
         Mobile_Ownername: {type: String},
         Mobile_IMEI1:{type: String},
         Mobile_IMEI2: {type: String},
-        Mobile_PersonName: {type: String},
+        Mobile_MissingLocation: {type: String},
         Mobile_MobileNumber: {type: String},
       
     },
