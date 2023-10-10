@@ -22,41 +22,41 @@ const missingBag_Schema = new mongoose.Schema(
             type: String,
             required: true
         },
-        Bag_hounorname:  {
+        Bag_ownerName:  {
             type: String,
             required: true
         },
-        Bag_address:  {
-            type: String,
-            required: true
-        },
-        Bag_city:  {
-            type: String,
-            required: true
-        },
-        Bag_state:  {
-            type: String,
-            required: true
-        },
+        // Bag_address:  {
+        //     type: String,
+        //     required: true
+        // },
+        // Bag_city:  {
+        //     type: String,
+        //     required: true
+        // },
+        // Bag_state:  {
+        //     type: String,
+        //     required: true
+        // },
         Bag_number:  {
             type: Number,
             required: true
         },
-        Bag_email: {
-            type: String,
-            required: true,
-            unique: true,
-            // match: /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+        // Bag_email: {
+        //     type: String,
+        //     required: true,
+        //     unique: true,
+        //     // match: /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
             
-        },
-        Bag_aadharcard:  {
-            type: Number,
-            required: true
-        },
-        Bag_pin:  {
-            type: Number,
-            required: true
-        },
+        // },
+        // Bag_aadharcard:  {
+        //     type: Number,
+        //     required: true
+        // },
+        // Bag_pin:  {
+        //     type: Number,
+        //     required: true
+        // },
         Bag_type:  {
             type: String,
             required: true
