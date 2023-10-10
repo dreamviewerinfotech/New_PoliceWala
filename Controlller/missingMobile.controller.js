@@ -3,10 +3,10 @@ const MissingMobile = require("../Model/missingMobile.model")
 
 exports.createMissingMobile = async (req, res) => {
     try{
-        const {_id} = await req.civilian
-        const createMobile = new MissingMobile({...req.body ,userId : _id});
+        const { id} = await req.civilian
+        const createMobile = new MissingMobile({...req.body ,userId : id});
         await createMobile.save();
-        res.json({ message: 'MissingMobile  saved successfully', status:200, createMobile}).status(201);
+        res.json({ message: 'MissingMobile  saved successfully', result : createMobile}).status(201);
 
     }catch (error) {
         return res.status(500).json({success: false, error: error.message });
