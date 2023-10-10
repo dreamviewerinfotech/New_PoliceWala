@@ -14,14 +14,6 @@ const missingOther_Schema = new mongoose.Schema(
             type: String,
             required: false
         },
-        other_Name: {
-            type: String,
-            required: false
-        },
-        lastseen: {
-            type: Date,
-            required: false
-        },
         other_image: {
             type: String,
             required: true

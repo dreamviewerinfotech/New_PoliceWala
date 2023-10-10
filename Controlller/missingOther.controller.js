@@ -20,8 +20,6 @@ const createOther = async (req,res) => {
             description : req.body.description,
             Other_date : req.body.Other_date,
             other_Place : req.body.other_Place,
-            other_Name : req.body.other_Name,
-            lastseen : req.body.lastseen,
             other_image : req.body.other_image,
             userId : id
           });
