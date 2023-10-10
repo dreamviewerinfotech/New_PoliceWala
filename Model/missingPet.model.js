@@ -7,47 +7,24 @@ const Pet_Schema = new mongoose.Schema(
         trim: true,
         required: true,
       },
+      Pet_MissingLocation : {
+        type: String,
+      },
         Pet_color:  {
         type: String,
         trim: true,
-      },
-        Pet_location:  {
-        type: String,
-        trim: true,
-        required: true,
       },
         Pet_image:  {
         type: String,
         required: true,
       },
-        Pet_brand:  {
+        Pet_Breed:  {
         type: String,
-      },
-        Pet_age:  {
-        type: String,
-        trim: true,
       },
         Pet_Ownername:  {
         type: String,
         trim: true,
         required: true,
-      },
-        Pet_email:  {
-        type: String,
-        trim: true,
-        required: true,
-      },
-        Pet_address:  {
-        type: String,
-        trim: true,
-      },
-        Pet_state:  {
-        type: String,
-        trim: true,
-      },
-        Pet_city:  {
-        type: String,
-        trim: true,
       },
         Pet_phonenumber:  {
         type: String,

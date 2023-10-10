@@ -4,6 +4,7 @@
 
 
 const PetModel = require ("./../Model/missingPet.model");
+// const sendNotification = require('./../NotificationSending/SendNotificationToPoliceStation');
 
 
 
@@ -14,26 +15,26 @@ const reportOfMissingPet = async (req,res) => {
         const  {id} = await req?.civilian;
 
         const newPetReport = new PetModel({
-            
-            Pet_date: req.body.Pet_date,
-            Pet_color: req.body.Pet_color,
-            Pet_location: req.body.Pet_location,
-            Pet_image: req.body.Pet_image,
-            Pet_brand: req.body.Pet_brand,
-            Pet_age: req.body.Pet_age,
-            Pet_Ownername: req.body.Pet_Ownername,
-            Pet_email: req.body.Pet_email,
-            Pet_address: req.body.Pet_address,
-            Pet_state: req.body.Pet_state,
-            Pet_city: req.body.Pet_city,
-            Pet_phonenumber: req.body.Pet_phonenumber,
-            userId : id
+               ...req.body , userId : id
         });
 
-        if (!newPetReport.Pet_date ) {
+        if (!newPetReport) {
             res.json({ message: "Please Fill All The Required Fields." }).status(400);
         } else {
             let newSavedPetReport = await newPetReport.save();
+
+            // const token = "dWUtTNUnRoK1cHgvG6amtq:APA91bFV1tsuOP60nFAOVEHM-YIgkeIruZh7TGpsqS8KG7LT8Qflm3RHDf_FtXMzWFIgOpB0nDZnTiUzev9t-_mPKmzTqsLNi_EXLCjcd73_YDMGYwVqAOQGA_H53A-LRhbL7VxyoAeO"
+            // const notificationData = {
+            //     missing_City: newPetReport.Pet_city,
+            //     missing_Complaint: newPetReport.Pet_phonenumber,
+            //     missing_Location : newPetReport.Pet_location
+            // };
+
+            // console.log(notificationData);
+    
+            // const notification = await sendNotification(notificationData,token);
+
+
             res.json({ message: 'Pet Report Saved successfully', result : newSavedPetReport }).status(201);
         }
     } catch (error) {
