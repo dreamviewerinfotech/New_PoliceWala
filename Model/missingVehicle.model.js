@@ -6,15 +6,11 @@ const vehicle_Schema = new mongoose.Schema(
             type: String,
             required: true
         },
-        Vehicle_date: {
-            type: Date,
-            required: true
-        },
         Vehicle_color: {
             type: String,
             required: true
         },
-        Vehicle_location: {
+        Vehicle_Missinglocation: {
             type: String,
             required: true
         },
@@ -26,26 +22,26 @@ const vehicle_Schema = new mongoose.Schema(
             type: String,
             required: true
         },
-        Vehicle_Station: {
-            type: String,
-            required: true
-        },
+        // Vehicle_Station: {
+        //     type: String,
+        //     required: true
+        // },
         Vehicle_model: {
             type: String,
             required: true
         },
-        Vehicle_address: {
-            type: String,
-            required: true
-        },
+        // Vehicle_address: {
+        //     type: String,
+        //     required: true
+        // },
         Vehicle_hounarname: {
             type: String,
             required: true
         },
-        Vehicle_email: {
-            type: String,
-            required: true
-        },
+        // Vehicle_email: {
+        //     type: String,
+        //     required: true
+        // },
         Vehicle_number: {
             type: String,
             required: true
@@ -54,15 +50,15 @@ const vehicle_Schema = new mongoose.Schema(
             type: String,
             required: true
         },
-        Vehicle_state: {
-            type: String,
-            required: true
-        },
-        Vehicle_City: {
-            type: String,
-            required: true
-        },
-        Vehicle_bodynumber: {
+        // Vehicle_state: {
+        //     type: String,
+        //     required: true
+        // },
+        // Vehicle_City: {
+        //     type: String,
+        //     required: true
+        // },
+        Vehicle_CHaiseNumber: {
             type: String,
             required: true
         },
@@ -70,14 +66,14 @@ const vehicle_Schema = new mongoose.Schema(
             type: String,
             required: true
         },
-        Vehicle_aadharcard: {
-            type: String,
-            required: true
-        },
-        Vehicle_pincode: {
-            type: String,
-            required: true
-        },
+        // Vehicle_aadharcard: {
+        //     type: String,
+        //     required: true
+        // },
+        // Vehicle_pincode: {
+        //     type: String,
+        //     required: true
+        // },
         Vehicle_type: {
             type: String,
             required: true

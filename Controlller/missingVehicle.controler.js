@@ -10,23 +10,16 @@ async function reportMissingVehicle (req,res) {
 
     const {
         Vehicle_name,
-        Vehicle_date,
         Vehicle_color,
-        Vehicle_location,
+        Vehicle_Missinglocation,
         Vehicle_brand,
-        Vehicle_Station,
         Vehilce_model,
-        Vehicle_address,
         Vehicle_hounarname,
-        Vehicle_email,
+        Vehicle_CHaiseNumber,
         Vehicle_number,
         Vehicle_phoneNumber,
-        Vehicle_state,
-        Vehcile_City,
         Vehicle_bodynumber,
         Vehicle_enginenumber,
-        Vehicle_aadharcard,
-        Vehicle_pincode,
         Vehicle_type,
         Vehicle_image
     } = req.body;
@@ -42,27 +35,20 @@ async function reportMissingVehicle (req,res) {
         }
 
         const newMissingVehicle = new missingVehicle({
-            Vehicle_name,
-            Vehicle_date,
-            Vehicle_color,
-            Vehicle_location,
-            Vehicle_brand,
-            Vehicle_Station,
-            Vehilce_model,
-            Vehicle_address,
-            Vehicle_hounarname,
-            Vehicle_email,
-            Vehicle_number,
-            Vehicle_phoneNumber,
-            Vehicle_state,
-            Vehcile_City,
-            Vehicle_bodynumber,
-            Vehicle_enginenumber,
-            Vehicle_aadharcard,
-            Vehicle_pincode,
-            Vehicle_type,
-            Vehicle_image,
-            userId : id
+          Vehicle_name,
+          Vehicle_color,
+          Vehicle_Missinglocation,
+          Vehicle_CHaiseNumber,
+          Vehicle_brand,
+          Vehilce_model,
+          Vehicle_hounarname,
+          Vehicle_number,
+          Vehicle_phoneNumber,
+          Vehicle_bodynumber,
+          Vehicle_enginenumber,
+          Vehicle_type,
+          Vehicle_image,
+          userId : id
           });
     
           const savedMissingVehicle = await newMissingVehicle.save();
