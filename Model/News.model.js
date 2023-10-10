@@ -7,7 +7,11 @@ const News_model = new mongoose.Schema(
             type : String,
             required : true
         },
-        News : {
+        Title : {
+            type : String,
+            required : true
+        },
+        Description : {
             type : String,
             required : true
         }

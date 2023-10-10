@@ -7,12 +7,9 @@ const createUpdate = async (req,res) => {
 
     try {
 
-        const  {id} = await req?.civilian;
-
         const newUpdate = new updatesModel({
             live_Message : req.body.live_Message,
             altMessage : req.body.altMessage,
-            userId : id
         });
 
         if (!newUpdate) {

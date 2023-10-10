@@ -19,8 +19,8 @@ const addNews = async(req,res) => {
        
         const newNews = new NewsModel({
             image : req.body.image,
-            News : req.body.news,
-         
+            Title : req.body.title,
+            Description : req.body.description
         });
 
         if (!newNews) {

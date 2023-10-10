@@ -10,9 +10,6 @@ const live_Updates = new mongoose.Schema(
         },
         altMessage : {
             type : String,
-        },
-        userId : {
-            type : String
         }
     },
     { timestamps: true }
