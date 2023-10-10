@@ -42,20 +42,11 @@ const getNews = async (req, res) => {
 
         if (!News) {
             return res.status(404).json({ message: "News not found" });
+        } else if (News) {
+            res.json({ message: "News found", result: News }).status(200);
         }
 
-        const allNews = News.map((news) => {
-            return {
-                Image : `${news.image}`,
-                News : news.News,
-                _id: news._id,
-                createdAt: news.createdAt,
-                updatedAt: news.updatedAt,
-                __v: news.__v,
-            };
-        });
-
-        res.json({ message: "News found", result: allNews }).status(200);
+       
     } catch (error) {
         console.error('Error occurred in News get', error.message);
         res.status(500).json({ error: "Internal Server Error" });
