@@ -9,6 +9,9 @@ const UserSchema = new mongoose.Schema({
         unique: true,
         required: true,
     },
+    Fcm_Token : {
+        type: Number,
+    },
      name: {
         type: String
     },

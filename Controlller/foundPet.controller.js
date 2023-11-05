@@ -32,7 +32,7 @@ exports.createFoundPet = async(req, res) =>{
 
 exports.getFoundById = async(req, res) =>{
 
-    const {foundId} = req.params;
+  
     try{
 
          const petId = await FoundPet.findOne({_id: foundId})

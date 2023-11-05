@@ -143,6 +143,7 @@ exports.registerCivilian = async (req, res) => {
       pincode,
       city,
       mobileno,
+      Fcm_Token,
       email,
       street,
       image
@@ -175,6 +176,7 @@ exports.registerCivilian = async (req, res) => {
       street: street,
       pincode: pincode,
       city: city,
+      Fcm_Token : Fcm_Token,
       password: hashedPassword,
       // confirmPassword: confirmPassword,
       image: image,
